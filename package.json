@@ -3,7 +3,13 @@
   "version": "1.0.0",
   "description": "Projeto de automação web com Playwright e Cucumber(BDD) e Page Objects utilizando o SauceDemo.",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "npx playwright test",
+    "test:bdd": "cucumber-js",
+    "test:bdd:paralelo": "cucumber-js -p paralelo",
+    "test:bdd:headed": "cross-env HEADLESS=false npm run test:bdd",
+    "report": "node generate_report.js"
+  },
   "keywords": [],
   "author": "Waleska de Castro",
   "license": "ISC",
@@ -11,6 +17,7 @@
   "devDependencies": {
     "@playwright/test": "^1.62.0",
     "@types/node": "^26.1.2",
+    "cross-env": "^10.1.0",
     "cucumber-html-reporter": "^7.2.0"
   },
   "dependencies": {
