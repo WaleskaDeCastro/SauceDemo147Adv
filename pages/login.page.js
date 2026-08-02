@@ -8,9 +8,9 @@ class LoginPage{
 
         this.url = "/";
 
-        this.usuario = '#user-name';
-        this.senha = '#password';
-        this.botaoLogin = '#login-button';
+        this.usuario = '[data-test="username"]';
+        this.senha = '[data-test="password"]';
+        this.botaoLogin = '[data-test="login-button"]';
 
     }
 

@@ -6,9 +6,11 @@ class ProductsPage{
 
         this.page = page;
 
-        this.titulo = '.title';
+        this.url = "/inventory.html";
 
-        this.carrinho = '.shopping_cart_link';
+        this.titulo = '[data-test="title"]';
+
+        this.carrinho = '[data-test="shopping-cart-link"]';
 
     }
 
@@ -22,13 +24,13 @@ class ProductsPage{
 
     async adicionar_produto(produto){
 
-        await this.page.locator('.inventory_item')
+        await this.page.locator('[data-test="inventory-item"]')
         .filter({
-            has: this.page.locator('.inventory_item_name',{
+            has: this.page.locator('[data-test="inventory-item-name"]', {
                 hasText: produto
             })
         })
-        .locator('button')
+        .getByRole('button')
         .click();
 
     }

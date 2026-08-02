@@ -6,12 +6,14 @@ class CartPage{
 
         this.page = page;
 
+        this.url = "/cart.html";
+
     }
 
     async verificar_nome(produto){
 
         await expect(
-            this.page.locator('.inventory_item_name')
+            this.page.locator('[data-test="inventory-item-name"]')
         ).toHaveText(produto);
 
     }
@@ -19,7 +21,7 @@ class CartPage{
     async verificar_preco(preco){
 
         await expect(
-            this.page.locator('.inventory_item_price')
+            this.page.locator('[data-test="inventory-item-price"]')
         ).toHaveText(preco);
 
     }
@@ -27,7 +29,7 @@ class CartPage{
     async verificar_quantidade(qtd){
 
         await expect(
-            this.page.locator('.cart_quantity')
+            this.page.locator('[data-test="item-quantity"]')
         ).toHaveText(qtd);
 
     }

@@ -10,7 +10,10 @@
     "test:bdd:headed": "cross-env HEADLESS=false npm run test:bdd",
     "report": "node generate_report.js"
   },
-  "keywords": [],
+  "keywords": [
+    "playwright",
+    "cucumber"
+  ],
   "author": "Waleska de Castro",
   "license": "ISC",
   "type": "commonjs",
